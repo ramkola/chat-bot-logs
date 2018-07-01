@@ -50,8 +50,6 @@ function logConversion(config) {
       });
 
       let data = JSON.stringify(responses, null, 2);
-      console.log(data);
-
       responses.unshift(["",
                 "conversation_id",
                 "intents",
@@ -64,9 +62,10 @@ function logConversion(config) {
                 "entities\n"]);
 
       fs.writeFile("./test.csv", responses, 'utf8', function(err) {
-       if(err) {}
+       if(err) {
+        console.error(err);
+       }
        });
-
     }
   });
 }

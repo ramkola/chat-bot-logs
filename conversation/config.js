@@ -1,5 +1,3 @@
-
-
 /**
  * The configuration object
  */
@@ -45,7 +43,6 @@ module.exports.fromCommanderConfig = function fromCommanderConfig(app) {
         return resolve(config);
       });
     });
-
 
   } else {
     return Promise.resolve(config);
